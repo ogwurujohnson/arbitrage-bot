@@ -1,0 +1,8 @@
+{
+  "name": "abitrage-bot",
+  "version": "1.0.0",
+  "description": "abitrage bot that detects abitrage opportunities between pancake and backery swaps and manages flash swap calls",
+  "main": "index.js",
+  "author": "Johnson Ogwuru <ogwurujohnson@gmail.com>",
+  "license": "MIT"
+}
