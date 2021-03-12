@@ -19,3 +19,16 @@ const wallet = new ethers.Wallet(privateKey, provider);
 
 const ETH_TRADE = 10;
 const DAI_TRADE = 3500
+
+const startBot = async () => {
+  const bakerySwapFactory = new ethers.Contract(
+    '',
+    UniswapV2Factory.abi, wallet
+  );
+  const pancakeSwapFactory = new ethers.Contract(
+    '',
+    UniswapV2Factory.abi, wallet
+  );
+  const daiAddress = '' //tokens can be changed to other desired ones
+  const wethAddress = ''
+}
