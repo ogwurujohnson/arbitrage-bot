@@ -4,5 +4,17 @@
   "description": "abitrage bot that detects abitrage opportunities between pancake and backery swaps and manages flash swap calls",
   "main": "index.js",
   "author": "Johnson Ogwuru <ogwurujohnson@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "keywords": ["defi", "bsc", "flashloans"],
+  "bugs": {
+    "url": "https://github.com/pedrobergamini/uni-sushi-flashloaner/issues"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ethers": "^5.0.32"
+  }
 }
