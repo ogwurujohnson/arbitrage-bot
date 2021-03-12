@@ -31,4 +31,27 @@ const startBot = async () => {
   );
   const daiAddress = '' //tokens can be changed to other desired ones
   const wethAddress = ''
+
+  let bakeryEthDai, pancakeEthDai;
+
+  const loadPairs = async () => {
+    bakeryEthDai = new ethers.Contract(
+      await bakerySwapFactory.getPair(wethAddress, daiAddress),
+      UniswapV2Pair.abi, wallet
+    );
+    pancakeEthDai = new ethers.Contract(
+      await pancakeSwapFactory.getPair(wethAddress, daiAddress),
+      UniswapV2Pair.abi, wallet
+    );
+  }
+
+  await loadPairs();
+
+  provider.on('block', async (blockNumber) => {
+    try {
+
+    } catch (err) {
+      console.log(err);
+    }
+  })
 }
