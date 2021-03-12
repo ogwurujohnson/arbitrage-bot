@@ -9,12 +9,19 @@
     "type": "git",
     "url": "git+"
   },
-  "keywords": ["defi", "bsc", "flashloans"],
+  "keywords": [
+    "defi",
+    "bsc",
+    "flashloans"
+  ],
   "bugs": {
     "url": "https://github.com/pedrobergamini/uni-sushi-flashloaner/issues"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
     "ethers": "^5.0.32"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.34"
   }
 }
