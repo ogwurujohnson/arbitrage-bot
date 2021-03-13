@@ -100,9 +100,30 @@ const startBot = async () => {
       // don't trade if gasCost is higher than the spread
       if (!shouldSendTx) return;
 
+      const options = {
+        gasPrice,
+        gasLimit,
+      };
+      const tx = await bakeryEthDai.swap(
+        !shouldStartEth ? DAI_TRADE : 0,
+        shouldStartEth ? ETH_TRADE : 0,
+        flashLoanerAddress,
+        ethers.utils.toUtf8Bytes('1'), options,
+      )
+
+      console.log('ARBITRAGE EXECUTED! PENDING TX TO BE MINED');
+      console.log(tx);
+
+      await tx.wait();
+
+      console.log('SUCCESS! TX MINED');
 
     } catch (err) {
       console.log(err);
     }
   })
 }
+
+console.log('Bot started!');
+
+startBot();
