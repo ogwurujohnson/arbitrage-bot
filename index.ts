@@ -49,7 +49,18 @@ const startBot = async () => {
 
   provider.on('block', async (blockNumber) => {
     try {
+      console.log(blockNumber)
 
+      const bakeryReserves = await bakeryEthDai.getReserves();
+      const pancakeReserves = await pancakeEthDai.getReserves();
+
+      const reserve0Bakery = Number(ethers.utils.formatUnits(bakeryReserves[0], 18))
+      const reserve1Bakery = Number(ethers.utils.formatUnits(bakeryReserves[1], 18))
+
+      const reserve0Pancake = Number(ethers.utils.formatUnits(pancakeReserves[0], 18))
+      const reserve1Pancake = Number(ethers.utils.formatUnits(pancakeReserves[1], 18))
+
+      
     } catch (err) {
       console.log(err);
     }
