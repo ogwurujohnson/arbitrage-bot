@@ -15,7 +15,7 @@ contract FlashLoaner {
     bakeryRouter = IUniswapV2Router02(_bakeryRouter);
   }
 
-  function uniswapV2Call(address _sender, uint _amount0, uint _amount1, bytes calldata _data) external {
+  function pancakeCall(address _sender, uint _amount0, uint _amount1, bytes calldata _data) external {
       address[] memory path = new address[](2);
       uint amountToken = _amount0 == 0 ? _amount1 : _amount0;
       
